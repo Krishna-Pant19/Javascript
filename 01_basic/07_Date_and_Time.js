@@ -20,5 +20,5 @@ console.log(Math.floor(myTimeStamp/1000)) // since when the output is changed to
 let newDate = new Date() // new is used to create an object from a constructor function or class.
 console.log(newDate.getFullYear()) //output will be 2026
 console.log(newDate.getMonth())  //output will be 10 but the month is 11(november) why because the counting starts from 0.
-console.log(newDate.getDate())
+console.log(newDate.getDate()) // output will show the date
 
