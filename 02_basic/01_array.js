@@ -81,4 +81,28 @@ const arr7 = [10,20,30,40,50]
 console.log(arr7.map(num => num>25)) //[false,false,ture,true,true]
 console.log(arr7.map(num =>num*2))   //[20,40,6,80,100]
 
-//filter-Creates a ne
+//filter-Creates a new array containing only element that satisfy equation
+
+const arr8 = [10,20,30,40,50]
+console.log(arr8.filter(num => num>25)) //output will be [30,40,50] that's the diff between filter and map. Map can also give boolean values as answer it doesn't give directly a array for comaprision purpose
+
+//forEach()-executes a function for every element in an array.
+
+const arr9 = [10,20,30,40,50]
+console.log(arr9.forEach(num =>{console.log(num)})) // Here output console.log is giving an undefined value as an answer otherwise the output will be like 10,20,30,40,50 but in row format.
+console.log(arr9.forEach(num =>{console.log(num>20)})) //output false,false,true,true,true,undefined in row format
+arr9.forEach(num =>{console.log(num=20)}) //output will be 20,20,20,20,20 in row format
+
+//Sort()- sort elements in an array
+
+const arr10 = [40,10,30,70,20]
+console.log(arr10.sort()) // output will be [10,20,30,40,70]
+
+//Note: By default js sort values as strings
+
+//Join()-converts array element into a string using a separator
+
+const arr11 = ["i","love","js"]
+console.log(arr11) // output will be ['i','love','js']
+console.log(arr11.join(" ")) // i love js
+console.log(arr11.join("")) // ilovejs
