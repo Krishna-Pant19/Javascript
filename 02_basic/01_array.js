@@ -34,7 +34,51 @@ const array6 = [10,20,30]
 array6.unshift(40) // used to add the element in the first place push used to add but in the last place 
 console.log(array6)
 
-//splice()- Add,remove
+//splice()- Add,remove or replace element at any position in an array
 const array7 = [10,20,30,40,50]
 array7.splice(0,2,60,70) 
 console.log(array7)
+
+//splice(at or from,deletecount,additem1,additem2)
+// splice is used to add, remove or replace elements at any position in an array.
+
+const arr = [10,20,30,40,50]
+arr.splice(1,2) // at index 1 delete 2 therefore 20and 30 will be deleted that's why the output is [10,40,50]
+console.log(arr)
+
+const arr2 = [10,20,30,40,50]
+arr2.splice(1,2,60,70) // at/from index 1 delete 2 and add  item 60,70 in that place therefore output will be [10,6,70,40,50]
+console.log(arr2)
+
+// slice-extraction a portion of an array without chnaging the original array
+// arr.slice(start,end) 
+// Note-start wale ko nhi katega but end wale ko hata dega (but kaam nhi kar rha)
+
+const arr3 = [10,20,30,40,50]
+console.log(arr3.splice(1,4)) // output will be [20,30,40,50]
+
+//LastIndexOf()-To know when the element last occured
+
+const arr4 = [10,20,30,20,50]
+console.log(arr4.lastIndexOf(20)) // Since 20 ka last index 3 hai therofre output be 3
+console.log(arr4.lastIndexOf(2)) // Output is -1
+
+//Includes-Checks whether an element exists in array or not 
+
+const arr5 = [10,20,30,40,50]
+console.log(arr5.includes(20)) // true
+console.log(arr5.includes(70)) // false
+
+//find()-returns the first element that satisfies the condition
+
+const arr6 = [10,20,30,40,50]
+console.log(arr6.find(num => num>25)) // since first number is 30 that is greater than 25 therefore returns 30
+console.log(arr5.find(num => num>60)) //undefined
+
+//Map() - Creates a new array by performing an operation
+
+const arr7 = [10,20,30,40,50]
+console.log(arr7.map(num => num>25)) //[false,false,ture,true,true]
+console.log(arr7.map(num =>num*2))   //[20,40,6,80,100]
+
+//filter-Creates a ne
